@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.yaz.school.model.LoginDetails;
 import com.yaz.school.service.UserService;
 
@@ -29,8 +30,10 @@ public class UserController {
 		
 		Map<String,Object> resultMap = new HashMap<String,Object>();
 		try{
-//			System.out.println("UserController,getAuthentication,loginDetails: "+loginDetails);
-//			resultMap.put("loginDetails", loginDetails);
+			ObjectMapper mapper = new ObjectMapper();
+			LoginDetails loginDetails = mapper.readValue(requestParams.get("data").toString(), LoginDetails.class);
+			System.out.println("UserController,getAuthentication,loginDetails: "+loginDetails);
+			resultMap.put("loginDetails", loginDetails);
 			
 		}catch(Exception e){
 			logger.error("getAuthentication, "+e.getMessage());
