@@ -37,9 +37,9 @@
 		<property name="dataSource" ref="dataSource" />
 		<property name="annotatedClasses">
 			<list>
-			<!--  
+			<!--  -->
 				<value>com.yaz.school.model.LoginDetails</value>
-				<value>com.yaz.school.model.StudentDetails</value> -->
+				<value>com.yaz.school.model.StudentDetails</value> 
 				<value>com.yaz.school.temp.model.StudentExcellData</value>
 				<value>com.yaz.school.model.StudentMarks</value>
 				<value>com.yaz.school.model.StudentEvaluation</value>

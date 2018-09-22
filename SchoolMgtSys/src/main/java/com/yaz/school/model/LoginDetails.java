@@ -14,8 +14,8 @@ import javax.persistence.Table;
 public class LoginDetails {
 	
 	@Id
-	@SequenceGenerator(name="pk_login_details_id",sequenceName="seq_login_details_id", allocationSize=1)
-	@GeneratedValue(strategy=GenerationType.SEQUENCE,generator="pk_login_details_id" )
+//	@SequenceGenerator(name="pk_login_details_id",sequenceName="seq_login_details_id", allocationSize=1)
+//	@GeneratedValue(strategy=GenerationType.SEQUENCE,generator="pk_login_details_id" )
 	@Column(name = "login_id", unique = true, nullable = false)
 	private Long loginId;
 	
